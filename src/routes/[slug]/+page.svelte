@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
 
+	export let data: PageData;
+	onMount(() => (window.location.href = data.url));
 </script>
-<!--  This serves as a proxy so no html needed -->
